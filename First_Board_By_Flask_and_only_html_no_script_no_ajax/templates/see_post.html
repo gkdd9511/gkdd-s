@@ -1,0 +1,94 @@
+<head>
+  <link rel="stylesheet" type="text/css" href={{ url_for('static',filename='bootstrap.css')}}>
+  </head>
+<body>
+  <h2> POST </h2>
+  <table class="table table-striped">
+{% for post in posts %}
+<thead>
+<tr>
+  <td>post_number: {{post[0]}}</td>
+  </tr>
+  <tr>
+    <td>writer: {{post[2]}}</td>
+    </tr>
+  <tr>
+  <td>title: {{post[1]}}</td>
+  </tr>
+  <tr>
+    <td>content: {{post[3]}}</td></tr>
+{% if post[4]=='None'%}
+<tr>
+  <td>files:None</td>
+  </tr>
+{% else %}
+<tr>
+  <td><a href= "/downloads?num={{post[0]}}" download={{post[4]}}>files: {{post[4]}}</a></td></tr>
+{% endif %}
+</thead>
+
+<br>
+<br>
+<table class="table talbe-striped">
+  <tbody>
+    
+  <tr>
+    <td>
+      <a href="/del_post?num={{post[0]}}" style="text-decoration:none">DEL</a></td>
+    
+    <td>
+      <a href="/edit_post?num={{post[0]}}" style="text-decoration:none">EDIT</a></td>
+       
+    <td>
+      </td>
+    <td>
+      <a href="/comment_post?num={{post[0]}}" style="text-decoration:none">COMMENT</a></td>
+       
+   </tr>
+   </tbody>
+   
+</table>
+{% endfor %}
+
+<br>
+<br>
+<form action='index' method='GET'>
+  <input type='submit' value="GO HOME">
+  </form>
+
+<h2>Comment</h2>
+
+
+<table class='table talbe-striped'>
+  <thead>
+  <tr>
+    <th> number </th>
+    <th> writer </th>
+    <th> content </th>
+    <th> date </th>
+   </tr>
+   </thead>
+  <tbody>
+    {% for comment in comments %}
+    <tr>
+      <td>{{ comment[0]}}</td>
+      <td>{{ comment[1]}}</td>
+      <td>{{ comment[2]}}</td>
+      <td>{{ comment[-1]}}</td>
+    
+      <td>
+        <a href="/del_comment?num={{comment[0]}}" style=text-decoration:none>DEL</a></td>
+      <td></td><td></td>
+     
+      <td>
+        <a href="/edit_comment?num={{comment[0]}}" style=text-decoration:none>EDIT</a></td>
+      </tr>
+    {% endfor %}
+
+      </tr>
+      </tbody>
+      </table>
+
+      
+
+</body>

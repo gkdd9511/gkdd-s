@@ -1,0 +1,21 @@
+<body>
+  <form action = '' method='POST' enctype='multipart/form-data'>
+    title: <input type="text" name='post_title'>
+    <br>
+    content:
+    <br>
+    <textarea name = 'post_content' cols="100" rows="5"
+                              placeholder="please write"></textarea>
+    <br>
+    <input type='file' name='_file' value="upload">
+
+    <br><br>
+    <input type ="submit" value="submit">
+    <input type ="reset" value="reset"><br><br>
+  </form>
+
+  <br><br>
+  <form action='/index' method='GET'>
+    <input type='submit' value='GO HOME'>
+    </form>
+  </body>

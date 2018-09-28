@@ -1,0 +1,5 @@
+sqlite3 main.db < schema2.sql
+
+filename =[4]
+
+file_downloads

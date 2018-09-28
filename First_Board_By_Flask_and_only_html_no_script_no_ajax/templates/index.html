@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width", initial-scale=1">
+  <title>first board</title>
+  <link rel='stylesheet' href={{ url_for('static',filename='bootstrap.css')}}>
+</head>
+
+<body>
+
+<table class="table table-striped">
+  <thead>
+  <tr>
+    <th> number </th>
+    <th> title </th>
+    <th> writer </th>
+    <th> date </th>
+ 
+  </tr>
+  </thead>
+  <tbody>
+
+  {% for post in posts %}
+  <tr>
+    <td>{{ post[0]}}</td>
+    <td>{{ post[1]}}</td>
+    <td>{{ post[2]}}</td>
+    <td>{{ post[-1]}}</td>
+
+    <td>
+      <a href="/see_post?num={{post[0]}}" style="text-decoration:none">VIEW</a></td>
+
+    </td>
+
+   
+    
+    {% endfor %}
+  </form>
+  </tr>
+  </tbody>
+</table>
+<hr/>
+<div class="text-center">
+
+
+
+<br>
+<h2> You are logined as {{user_name}} </h2>
+<br>
+<br>
+
+<form action='/register' method="GET">
+  <input type="submit" value="Sign Up">
+</form>
+
+<form action='/logout' method="GET">
+  <input type="submit" value="Logout">
+</form>
+
+<form action='/user_edit_chk' method="GET">
+  <input type="submit" value="User Edit">
+</form>
+
+<form action='/user_del' method="GET">
+  <input type="submit" value="User Delete">
+</form>
+
+<form action='/create_post' method='GET'>
+  <input type="submit" value="Create Post">
+</form>
+
+
+</body>
+</html>
+

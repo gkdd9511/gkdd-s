@@ -1,0 +1,26 @@
+<body>
+{% for post in posts %}
+<form action='' method='POST'>
+post_number: <input type="text" placeholder='{{post[0]}}' name="post_num">
+<br>
+
+title:  <input type="text" placeholder='{{post[1]}}' name="post_title">
+<br>
+content:
+<br>
+  <textarea name="post_content" cols="100" rows="5"
+                                           placeholder='{{post[3]}}'></textarea>
+  <br><br>
+
+  <input type = "submit" value="submit">
+  <input type ="reset" value="reset"><br><br>
+
+</form>
+{% endfor %}
+<form action='index' method='GET'>
+  <input type='submit' value='GO HOME'>
+  </form>
+
+</body>
+
+

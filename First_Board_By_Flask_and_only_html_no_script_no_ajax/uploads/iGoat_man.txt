@@ -1,0 +1,78 @@
+Reverse Engineering -
+
+Data Protection (Rest) -
+-Core Data Storage -
+-Local Data Storage(SQLite) - 
+-Keychain Usage - 
+-Plist Storage - 
+-NSUserDefaults Storage - 
+-YAP Storage - 
+-Realm Data Storage - 
+-CouchBase Storage - 
+-Cookie Storage - 
+-Webkit Cache - 
+
+Data Protection (Transit)
+-Server Communication - 
+-Public Key Pinning - 
+
+Binary Patching - 
+
+Tampering - 
+
+Authentication - 
+
+Broken Cryptography - 
+
+iGoat Keychain Analyzer - 
+
+Cloud Misconfiguration - 
+
+Runtime Analysis
+-Runtime Analysis - 
+-Runtime Brute Force Attack - 
+-Personal Photo Storage - 
+
+Side Channel Data Leaks 
+-Keystroke Logging - 
+-Backgrounding - 
+-Cut-and-Paste - 
+-Device Logs - 
+
+Social Engineering - 
+
+URL Scheme Attack - 
+
+Injection Flaws  
+-SQL injection -
+-Cross Site Scripting - 
+
+Weak Server Side Control - 
+
+Memory Management - 
+
+Key Management
+-Hardcoded Keys - 
+-Random Key Generation - 
+-Key Storage Server Side - 
+-Secure NSUserDefaults - 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
